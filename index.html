@@ -268,36 +268,33 @@
       <div class="contenido">
         <p>User Agent: <output id="agent"></output></p>
         <campo-dinámico>
-          <input id="nombre" required>
-          <label for="nombre">Nombre</label>
+          <input type="text" id="numero1" required>
+          <label for="numero1">Primero número</label>
           <small>Requerido</small>
         </campo-dinámico>
         <campo-dinámico>
-          <input id="email" type="email">
+          <input type="text" id="numero2" required>
           <!-- <input id="email" type="email" autocomplete="off"> -->
-          <label for="email">Email</label>
+          <label for="numero2">Segundo número</label>
         </campo-dinámico>
-        <campo-dinámico>
-          <!--
-          textarea
-            Control de captura de texto de varios renglones.
-          rows="3"
-            Número de renglones. -->
-          <textarea id="dirección" rows="3" required></textarea>
-          <label for="dirección">Dirección</label>
-        </campo-dinámico>
-        <campo-dinámico>
-          <select id="grupo">
-            <option value=""></option>
-            <option value="IC21">IC-21</option>
-            <option value="IC22">IC-22</option>
-            <option value="IC23">IC-23</option>
-          </select>
-          <label for="grupo">Grupo</label>
-        </campo-dinámico>
+        
         
       </div>
     </form>
+
+ <button onclick="sumar()">Sumar</button>
+ <script>
+  function sumar(){
+   var numero1 = document.getElementById("numero1").value;
+   var numero2 = document.getElementById("numero2").value;
+
+   var suma = parseInt(numero1) + parseInt(numero2);
+
+   document.writeln(suma);
+  }
+ </script> 
+
+
     <script>
       // Recupera la descripción del navegador en que se ejecuta este código.
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -308,6 +305,8 @@
       if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
         document.body.classList.add('ios');
       }
+
+
     </script>
     
     <footer>
@@ -315,5 +314,11 @@
         <mi-footer></mi-footer>
       </p>
     </footer>
+
+
+
+    
+
+
   </body>
 </html>
