@@ -1,38 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ejemplo de PWA</title>
-    <script src="js/registraServiceWorker.js"></script>
-
-    <!-- Ícono para la página web. Debe ponerse en la raíz de la página. -->
-    <link rel="icon" sizes="32x32" href="favicon.ico">
-
-    <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
-    <meta name="theme-color" content="#81d4f4">
-
-    <!-- Configuración de la PWA: Chrome y Edge. -->
-    <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Móvil</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
-
-    <!-- Configuración para Web Clip en Safari. -->
-    <meta name="apple-mobile-web-app-title" content="dmppwa">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="apple-touch-icon" href="img/icono2048.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="img/icono256.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
-    <link rel="apple-touch-icon" sizes="2048x2048" href="img/icono2048.png">
-
-    <script type="module" src="cmp/mi-footer.js"></script>
-    <link rel="stylesheet" href="css/estilos.css">
-
-
     <style>
       /* :root
        * Elemento raíz del documento. En este caso corresponde al elemento html.
@@ -249,15 +225,8 @@
       }
       customElements.define("campo-dinámico", CampoDinámico);
     </script>
-
-
-    </head>
+  </head>
   <body>
-    <h1>Ejemplo de PWA</h1>
-
-
-
-
     <form action="javascript:;">
       <header>
         <div class="toolbar">
@@ -298,7 +267,7 @@
           <label for="grupo">Grupo</label>
         </campo-dinámico>
         <footer>
-          
+          <p>Copyright &copy; 2020 Gilberto Pacheco Gallegos.</p>
         </footer>
       </div>
     </form>
@@ -313,15 +282,5 @@
         document.body.classList.add('ios');
       }
     </script>
-
-
-
-
-    
-    <footer>
-      <p>
-        <mi-footer></mi-footer>
-      </p>
-    </footer>
   </body>
 </html>
