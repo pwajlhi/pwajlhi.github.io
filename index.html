@@ -295,20 +295,6 @@
  </script> 
 
 
-    <script>
-      // Recupera la descripción del navegador en que se ejecuta este código.
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      agent.value = userAgent;
-      if (/android/i.test(userAgent)) {
-        document.body.classList.add("android");
-      }
-      if (/iPad|iPhone|iPod|Mac/.test(userAgent) && !window.MSStream) {
-        document.body.classList.add('ios');
-      }
-
-
-    </script>
-    
     <footer>
       <p>
         <mi-footer></mi-footer>
