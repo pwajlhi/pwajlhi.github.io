@@ -24,14 +24,16 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
     <link rel="apple-touch-icon" sizes="2048x2048" href="img/icono2048.png">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+
     <script type="module" src="cmp/mi-footer.js"></script>
     <link rel="stylesheet" href="css/estilos.css">
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
       <style>
         /* :root
@@ -42,9 +44,9 @@
            * Valores que puede definir el desarrollador y reutilizar en todas las
            * definiciones de estilos. Deben iniciar con -- y colocarse en el
            * elemento raíz. */
-          --color-primario: black;
-          --color-primario-fondo: #81d4fa;
-          --color-contenido: black;
+          --color-primario: rgb(255, 255, 255);
+          --color-primario-fondo: #000000;
+          --color-contenido: rgb(0, 0, 0);
           --color-contenido-fondo: white;
           --color-control-sin-foco: gray;
           --color-control-con-foco: #03a9f4;
@@ -258,45 +260,58 @@
     </head>
   <body>
 
-
-    <div><h1>Prueba</h1></div>
-
-
     <form action="javascript:;">
       <header>
         <div class="toolbar">
-          <h1>Layout</h1>
-          <span class="acciones">
-            <button onclick="calcular();"><span class="material-icons">save</span></button>
-          </span>
+          <h1>M.R.U.</h1>
+        
         </div>
       </header>
       <div class="contenido">
-        <p>User Agent: <output id="agent"></output></p>
+        <p><b>Movimiento Rectilíneo Uniforme: <output id="agent"></output></b></p>
+        <p>Un movimiento es rectilíneo cuando un objeto describe una trayectoria recta a velocidad constante, dado que su aceleración es nula.​</p>
+         <b>Fórmula: s=s0+v*t</b>
+         <p>s = posición final</p>
+
         <campo-dinámico>
           <input type="text" id="numero1" required>
-          <label for="numero1">Primero número</label>
+          <label for="numero1">s0: Posición inicial (m)</label>
           <small>Requerido</small>
         </campo-dinámico>
+
         <campo-dinámico>
           <input type="text" id="numero2" required>
           <!-- <input id="email" type="email" autocomplete="off"> -->
-          <label for="numero2">Segundo número</label>
+          <label for="numero2">v: Velocidad (m/s)</label>
+        </campo-dinámico>
+
+        <campo-dinámico>
+          <input type="text" id="numero3" required>
+          <!-- <input id="email" type="email" autocomplete="off"> -->
+          <label for="numero3">t: Intervalo de tiempo (s)</label>
         </campo-dinámico>
         
         
       </div>
     
+    
     </div>
+
+    
+      <button onclick="calcular();">calcular</span></button>
+   
+
     </form>
 
+    
  <script>
      
      function calcular() {
        var num1 = parseInt(document.getElementById('numero1').value);
        var num2 = parseInt(document.getElementById('numero2').value);
-       var suma = num1 + num2;
-       alert('La suma es: '+suma);
+       var num3 = parseInt(document.getElementById('numero3').value);
+       var suma = (num1 + num2) * num3;
+       alert('La posición final es: '+suma+' mts.');
      }
      
  </script> 
