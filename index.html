@@ -73,7 +73,7 @@
   
         .toolbar {
           display: flex;
-          padding: 1rem;
+          padding: 20px;
           position: relative;
         }
   
@@ -223,6 +223,19 @@
         campo-dinámico :invalid~small {
           color: var(--color-control-error);
         }
+
+
+        .titulo {
+        display: block;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.171);
+        padding-left: 300px;
+        padding-top: 80px;
+      }
+
+
+
+
       </style>
       <script>
         class CampoDinámico extends HTMLElement {
@@ -252,8 +265,10 @@
 
     </head>
   <body>
-    <h1>Ejemplnbo de PWA</h1>
-    <p>Holakjbkjn</p>
+
+
+    <div class="titulo">
+    <div><h1>Prueba</h1></div>
 
 
     <form action="javascript:;">
@@ -281,8 +296,9 @@
         
       </div>
 
-      <input type="button" value="Calcular" onclick="calcular();" >
-
+      <button onclick="calcular();"><span class="material-icons">save</span></button>
+    
+    </div>
     </form>
 
  <script>
