@@ -13,7 +13,7 @@ const ARCHIVOS = [
   "img/icono1024.png",
   "img/icono2048.png",
   "js/registraServiceWorker.js",
-  "favicon.ico",
+  "calc.ico",
   "index.html",
   "manifest.json",
   '/'
