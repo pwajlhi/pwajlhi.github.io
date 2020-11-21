@@ -44,8 +44,8 @@
            * Valores que puede definir el desarrollador y reutilizar en todas las
            * definiciones de estilos. Deben iniciar con -- y colocarse en el
            * elemento raíz. */
-          --color-primario: rgb(255, 255, 255);
-          --color-primario-fondo: #000000;
+          --color-primario: rgb(0, 0, 0);
+          --color-primario-fondo: #bba946;
           --color-contenido: rgb(0, 0, 0);
           --color-contenido-fondo: white;
           --color-control-sin-foco: gray;
@@ -264,6 +264,10 @@
       <header>
         <div class="toolbar">
           <h1>M.R.U.</h1>
+
+          <span class="acciones">
+            <button onclick="calcular();"><span class="material-icons">save</span></button>
+          </span>
         
         </div>
       </header>
@@ -274,28 +278,27 @@
          <p>s = posición final</p>
 
         <campo-dinámico>
-          <input type="text" id="numero1" required>
+          <input type="text" id="numero1" required pattern="[0-9]" title="Sólo ingresa números"/>
+
           <label for="numero1">s0: Posición inicial (m)</label>
           <small>Requerido</small>
         </campo-dinámico>
 
         <campo-dinámico>
-          <input type="text" id="numero2" required>
+          <input type="text" id="numero2" required pattern="[0-9]" title="Sólo ingresa números"/>
           <!-- <input id="email" type="email" autocomplete="off"> -->
           <label for="numero2">v: Velocidad (m/s)</label>
         </campo-dinámico>
 
         <campo-dinámico>
-          <input type="text" id="numero3" required>
+          <input type="text" id="numero3" required pattern="[0-9]" title="Sólo ingresa números"/>
           <!-- <input id="email" type="email" autocomplete="off"> -->
           <label for="numero3">t: Intervalo de tiempo (s)</label>
         </campo-dinámico>      
       </div>
-   
-    </div>
-      <button onclick="calcular();">calcular</span></button>
+      
     </form>
-    
+    <center><button onclick="calcular();">calcular</button></center>
  <script>
      
      function calcular() {
