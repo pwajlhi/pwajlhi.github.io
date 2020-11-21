@@ -278,22 +278,22 @@
          <p>s = posición final</p>
 
         <campo-dinámico>
-          <input type="text" id="numero1" required pattern="[0-9]" title="Sólo ingresa números"/>
+          <input type="text" id="s0" required pattern="[0-9]" title="Sólo ingresa números"/>
 
-          <label for="numero1">s0: Posición inicial (m)</label>
+          <label for="s0">s0: Posición inicial (m)</label>
           <small>Requerido</small>
         </campo-dinámico>
 
         <campo-dinámico>
-          <input type="text" id="numero2" required pattern="[0-9]" title="Sólo ingresa números"/>
+          <input type="text" id="v" required pattern="[0-9]" title="Sólo ingresa números"/>
           <!-- <input id="email" type="email" autocomplete="off"> -->
-          <label for="numero2">v: Velocidad (m/s)</label>
+          <label for="v">v: Velocidad (m/s)</label>
         </campo-dinámico>
 
         <campo-dinámico>
-          <input type="text" id="numero3" required pattern="[0-9]" title="Sólo ingresa números"/>
+          <input type="text" id="t" required pattern="[0-9]" title="Sólo ingresa números"/>
           <!-- <input id="email" type="email" autocomplete="off"> -->
-          <label for="numero3">t: Intervalo de tiempo (s)</label>
+          <label for="t">t: Intervalo de tiempo (s)</label>
         </campo-dinámico>      
       </div>
       
@@ -302,11 +302,11 @@
  <script>
      
      function calcular() {
-       var num1 = parseInt(document.getElementById('numero1').value);
-       var num2 = parseInt(document.getElementById('numero2').value);
-       var num3 = parseInt(document.getElementById('numero3').value);
-       var suma = (num1 + num2) * num3;
-       alert('La posición final es: '+suma+' mts.');
+       var n1 = parseInt(document.getElementById('s0').value);
+       var n2 = parseInt(document.getElementById('v').value);
+       var n3 = parseInt(document.getElementById('t').value);
+       var res = (n1 + n2) * n3;
+       alert('La posición final es: '+ res +' mts.');
      }
      
  </script> 
